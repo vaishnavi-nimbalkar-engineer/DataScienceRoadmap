@@ -1,7 +1,5 @@
 # DATA SCIENCE ROADMAP 2025
  
-## Data Science Roadmap for anyone interested in how to break into the field!
-
 [This Video](https://www.youtube.com/watch?v=5zRvq7CG6Zw&t=5s) is for you (Highly Recommended)
 
 ### Data Science vs Data Analytics vs Data Engineering - What's the Difference?
@@ -22,7 +20,7 @@ Focuses on looking at existing data sets and creating solutions to capture data,
 
 Focuses on creating the correct infrastructure and tools required to support the business.  Data Engineers look at what are the optimal ways to store and extract data and involves writing scripts and building data warehouses.  Data Engineering require skillsets that are centered on Software Engineering, Computer Science and high level Data Science.  The tools Data Engineers utilize are mainly Python, Java, Scala, Hadoop, and Spark.
 
-## 🔰 Beginner 🔰
+## Beginner 
 
 ### Schedule
 
@@ -120,9 +118,8 @@ Note: it's already mentioned in the above probability course <br>
         &emsp;&emsp;&emsp;📹 [DataCamp-EDA in Python](https://learn.datacamp.com/courses/exploratory-data-analysis-in-python) <br>
         &emsp;&emsp;&emsp;📹 [IBM-EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning) <br>
 
-<img align="right" width="290" height="203" src="https://github.com/user-attachments/assets/6b55d5e6-1253-417e-8e24-f29e95acb949">
 
-**10. Dashboards**<br>
+**10. Dashboards**
 
 &emsp;*Power BI*<br>
         &emsp;&emsp;&emsp;📹 [Power BI - Youtube (Alex)](https://youtube.com/playlist?list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&si=pR4VSrR1P2O-AaBJ)<br>
@@ -130,7 +127,8 @@ Note: it's already mentioned in the above probability course <br>
         &emsp;&emsp;&emsp;📹 [Arabic - Youtube (Zanoon)](https://www.youtube.com/watch?v=P_Nr0FMyn9w&list=PL69umUTzySPGWMxnmhX9SV5PIEbdnHv63&index=1)<br>
         &emsp;&emsp;&emsp;📹 [Arabic - Youtube](https://www.youtube.com/watch?v=ykvAWKML9Gk&list=PLof3yw6ZFPFhV75Ptf-5Q88bgUtLOBvOw)<br>
         &emsp;&emsp;&emsp;📹 [Guy in a Cube - Youtube](https://www.youtube.com/@GuyInACube/featured)<br>
- &emsp;*Tableau* <img src="https://raw.githubusercontent.com/mrankitgupta/mrankitgupta/a768d6bf0a001f03327578ae12f8867e4056cbaf/tableau-software.svg" alt="tableau" width="20" height="20"/><br>
+
+ &emsp;*Tableau*<br>
         &emsp;&emsp;&emsp;📕 [Tutorial](https://www.datacamp.com/community/tutorials/data-visualisation-tableau)<br>
         &emsp;&emsp;&emsp;📹 [docs](https://www.tableau.com/learn/training/20201)<br>
         &emsp;&emsp;&emsp;📹 [course - datacamp](https://learn.datacamp.com/courses/introduction-to-tableau)<br>
@@ -173,12 +171,28 @@ Note: it's already mentioned in the above probability course <br>
          &emsp;&emsp;&emsp;📕 [fbprohet](https://facebook.github.io/prophet/docs/quick_start.html)<br>
          &emsp;&emsp;&emsp;📹 Arabic Source [Video1](https://www.youtube.com/watch?v=TvhaHPq6xLU&list=TLPQMjYwNzIwMjEPGXX6392WJA&index=1) & [Video2](https://www.youtube.com/watch?v=mipF7mRVpk0&list=TLPQMjYwNzIwMjEPGXX6392WJA&index=2)<br>
   
-<h4><i>At The end of the Beginner phase apply what you've learned on a project.</i></h4>
+## Intermediate 
 
-***
+### Schedule
 
-
-## 🔰 Intermediate 🔰
+| Month/Week                                                    | Topic                                        | Resources                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Month 1**<td colspan=3>**Mathematics for Machine Learning** |
+| 1                                                             | Linear Algebra                               | [Khan Academy - Linear Algebra](https://www.khanacademy.org/math/linear-algebra), [Mathematics for Machine Learning: Linear Algebra](https://www.coursera.org/learn/linear-algebra-machine-learning), [3Blue1Brown - Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra)                                                                                                                                                                                                                                         |
+| 2                                                             | Calculus                                     | [Multivariate Calculus - Coursera](https://www.coursera.org/learn/multivariate-calculus-machine-learning), [Essence of Calculus - Youtube](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)                                                                                                                                                                                                                                                                                                                       |
+| 3                                                             | Principal Component Analysis (PCA)           | [PCA - Coursera](https://www.coursera.org/learn/pca-machine-learning)                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 4                                                             | Mathematics for Machine Learning             | [Mathematics for Machine Learning and Data Science - Andrew Ng](https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science), [Mathematics for Machine Learning - Most of the needed basics](https://www.youtube.com/watch?v=vLJcduC4lBM&list=PLcQCwsZDEzFmlSc6levE3UV9rZ8yY-D_7)                                                                                                                                                                                                                           |
+| **Month 2**<td colspan=3>**Machine Learning**                 |
+| 5                                                             | Introduction to Machine Learning             | [Coursera - Old Course by Andrew Ng (Octave/Matlab)](https://www.coursera.org/learn/machine-learning), [Coursera Andrew`s new ML Specialization (Python)](https://www.coursera.org/specializations/machine-learning-introduction), [Machine Learning - StatQuest - YouTube](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)                                                                                                                                                                                      |
+| 6                                                             | Machine Learning Algorithms                  | [Machine Learning Stanford Full Course on YouTube by Andrew](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN), [CS480/680 Intro to Machine Learning - Spring 2019 - University of Waterloo](https://www.youtube.com/playlist?list=PLdAoL1zKcqTW-uzoSVBNEecKHsnug_M0k), [SYDE 522 – Machine Intelligence (Winter 2018, University of Waterloo)](https://www.youtube.com/playlist?list=PL4upCU5bnihwCX93Gv6AQnKmVMwx4AZoT)                                                                               |
+| 7                                                             | Machine Learning Projects                    | [Machine Learning for Engineers 2022](https://apmonitor.com/pds/), [Introduction to Machine Learning Course - Udacity](https://www.udacity.com/course/intro-to-machine-learning--ud120), [Hesham Asem - Arabic content](https://www.youtube.com/c/HeshamAsem/playlists)                                                                                                                                                                                                                                                                    |
+| 8                                                             | Hands-On Machine Learning                    | [Hands On ML 1st Edition](https://drive.google.com/file/d/1uro1p6SlYolSkF0fbFKau0pOQ9ENZqny/view?usp=sharing), [Hands On ML 2nd Edition](https://drive.google.com/file/d/1rS95FTNfiVG4WjGnPjd73GqrmEKey4N1/view?usp=sharing), [Hands On ML 3rd Edition](https://drive.google.com/file/d/11VeqPJw8s9SC9Ru7IVeQhiTyV_9TliOE/view?usp=sharing), [Code Examples](https://github.com/ageron/handson-ml)                                                                                                                                         |
+| **Month 3**<td colspan=3>**Advanced Topics and Projects**     |
+| 9                                                             | Web Scraping and APIs                        | [Web Scraping Course](https://learn.datacamp.com/courses/web-scraping-with-python), [Web Scraping Tutorial](https://www.dataquest.io/blog/web-scraping-tutorial-python/), [Beautiful Soup Tutorial](https://realpython.com/beautiful-soup-web-scraper-python/), [API Tutorial](https://www.dataquest.io/blog/python-api-tutorial/), [API Article](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fhow-to-pull-data-from-an-api-using-python-requests-edcc8d6441b1)                                 |
+| 10                                                            | Statistics                                   | [Think Stats Book](https://greenteapress.com/thinkstats/thinkstats.pdf), [Think Bayes Book](https://www.greenteapress.com/thinkbayes/thinkbayes.pdf)                                                                                                                                                                                                                                                                                                                                                                                       |
+| 11                                                            | Advanced SQL                                 | [Joining Data in SQL - DataCamp](https://learn.datacamp.com/courses/joining-data-in-postgresql), [Intermediate SQL - DataCamp](https://learn.datacamp.com/courses/joining-data-in-postgresql), [More Advanced SQL](https://www.coursera.org/lecture/data-driven-astronomy/more-advanced-sql-GDmo5)                                                                                                                                                                                                                                         |
+| 12                                                            | Feature Engineering and Model Explainability | [Feature Engineering Tutorial](https://www.kaggle.com/learn/feature-engineering), [Feature Engineering Article](https://www.medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Ffeature-engineering-for-machine-learning-3a5e293a5114), [Feature Engineering Book](https://drive.google.com/file/d/1BkJYO0tqMYptTWUDQ7X0vd2aygohHRm8/view?usp=sharing), [SHAP Documentation](https://shap.readthedocs.io/en/latest/), [Kaggle ML Explainability](https://www.kaggle.com/learn/machine-learning-explainability) |
+### Content
 
 **1. Math for ML**: consists of Linear Algebra, Calculus and PCA. <br>
 📹 [Mathematics for Machine Learning and Data Science - Andrew Ng](https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science?irclickid=zzy33K1O0xyNUAmxqWUjDwedUkAUtSWUJXKyTY0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3117765&utm_content=b2c#courses)<br>
@@ -240,7 +254,23 @@ APIs <br>
 
 <i>Read this book, please</i> :open_book: [Introduction to Statistical Learning with Applications in R](https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/blob/main/Books/Introduction%20to%20Statistical%20Learning%20with%20Applications%20in%20R.pdf) بقولك اقرأه<img src="https://c.tenor.com/SOVMSXmWB1kAAAAi/tony-star-jumping.gif" width="35"><br>
 ***
-## 🔰 Advanced 🔰
+## Advanced 
+
+### Schedule
+
+| Month/Week                                              | Topic                                  | Resources                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Month 1**<td colspan=3>**Deep Learning**              |
+| 1                                                       | Introduction to Deep Learning          | [Deep Learning Fundamentals](https://www.youtube.com/playlist?list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU), [Introduction to Deep Learning - MIT](http://introtodeeplearning.com/), [Deep Learning Specialization - Coursera](https://www.coursera.org/specializations/deep-learning)        |
+| 2                                                       | Convolutional Neural Networks (CNNs)   | [Stanford Lecture - Convolutional Neural Networks for Visual Recognition](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv), [Deep Learning for Computer Vision - Michigan](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) |
+| 3                                                       | Recurrent Neural Networks (RNNs)       | [Deep Learning Specialization - Sequence Models](https://www.coursera.org/learn/nlp-sequence-models), [Recurrent Neural Networks - Stanford](https://www.youtube.com/watch?v=6niqTuYFZLQ&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=10)                                               |
+| 4                                                       | Generative Adversarial Networks (GANs) | [Deep Learning Specialization - Generative Adversarial Networks](https://www.coursera.org/learn/generative-adversarial-networks-gans), [GANs in Action](https://www.manning.com/books/gans-in-action)                                                                                    |
+| **Month 2<**<td colspan=3>**Advanced Machine Learning** |
+| 5                                                       | Reinforcement Learning                 | [Deep Reinforcement Learning - UC Berkeley](https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A), [Reinforcement Learning Specialization - Coursera](https://www.coursera.org/specializations/reinforcement-learning)                                               |
+| 6                                                       | Natural Language Processing (NLP)      | [NLP Specialization - Coursera](https://www.coursera.org/specializations                                                                                                                                                                                                                 |
+
+### Content
+
 
 **1. Deep Learning** <br>
         &emsp;&emsp;&emsp;📹 [Deep Learning Fundamentals](https://www.youtube.com/playlist?list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU)<br>
@@ -413,7 +443,7 @@ Deep Learning - MIT](http://introtodeeplearning.com/?fbclid=IwAR35rIygYlCn84DV7m
 
 20. [Machine Learning Test Cheat Sheet](https://www.cheatography.com/lulu-0012/cheat-sheets/test-ml/pdf/)
 
-21. [Machine Learning Cheat Sheets (Recommended Guide)](https://drive.google.com/file/d/1rQRJvWk5s9rUCesri0apxutbF4eDHR69/view?usp=sharing) *راجع المواضيع اللي في الشيت دي يا عزيزي وشوف اللي ناقصك* </details> 
+21. [Machine Learning Cheat Sheets (Recommended Guide)](https://drive.google.com/file/d/1rQRJvWk5s9rUCesri0apxutbF4eDHR69/view?usp=sharing) *Review the topics in this cheat sheet and see what you are missing* </details> 
 ***
 
 ### The best way to practice is to take part in competitions. <img src="https://media.tenor.com/0ENB5HuTH0gAAAAi/trophy-beker.gif"  width="30px" height="30px"><img src="https://media.tenor.com/0ENB5HuTH0gAAAAi/trophy-beker.gif"  width="30px" height="30px">	<br>
@@ -524,13 +554,3 @@ When we talk about top data science competitions, [**Kaggle**](https://www.kaggl
 &emsp;&emsp;📹[Video 2](https://www.youtube.com/watch?v=CrTO0hrC-zQ)
 </details>
 
-***
-:pushpin: [<b><i>Data & AI Companies in Egypt</i></b>](https://trello.com/b/u4HH9Anu/data-ai-jobs-in-egypt) &emsp; - &emsp; [<i>AI/ML Driven Companies In Egypt</i>](https://github.com/harryadel/AI-ML-Driven-Companies-In-Egypt)
-***
-
-<h2>Contact Me :iphone:</h2> 	 <br>
-  
-<a href="https://www.facebook.com/MoatazElmesmary/" title="Facebook"><img src="https://img.shields.io/badge/Facebook-%234267B2?style=flat&logo=Facebook&logoColor=white"/></a>
-<a href="https://twitter.com/MoatazElmesmary" title="twitter"><img src="https://img.shields.io/twitter/url?label=twitter&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2F%3Flabel%3Dtwitter%26style%3Dsocial"/></a>
-<a href="https://www.linkedin.com/in/MoatazElmesmary/" title="LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-%230177B5?style=flat&logo=linkedin&logoColor=white"/></a><h1 align="center">
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Architects+Daughter&size=26&color=%23DFC6B4&center=true&vCenter=true&lines=Show+Some+❤️;By+Starring+This+Repo⭐️;I+Keep+It+Up-To-Date;لاڤ+يو+أول)](https://git.io/typing-svg)</h1>
