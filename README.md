@@ -1,84 +1,48 @@
-<h2>&emsp;&emsp;&emsp;&emsp; DATA SCIENCE ROADMAP :pirate_flag: 2025 </h2>
+# DATA SCIENCE ROADMAP 2025
  
-### Data Science Roadmap for anyone interested in how to break into the field!
+## Data Science Roadmap for anyone interested in how to break into the field!
 
-<h4><i>This repository is intended to provide a free Self-Learning Roadmap to learn the field of Data Science.  I provide some of the best free resources.</i></h4><br>
+[This Video](https://www.youtube.com/watch?v=5zRvq7CG6Zw&t=5s) is for you (Highly Recommended)
 
-&emsp;&emsp;[Our Previous Roadmap](https://github.com/Seif-Mohamed1/DataScience-Squad) ♥️<br>
-&emsp;&emsp; :warning:	<b>*Before we start,*</b> :warning:
-#### If you Dont know What`s Data Science or Projects Life Cycle (starting from Business Understanding to Deployment) or Which Programming Language you should go for or Job Descriptions or the required Soft & Hard Skills needed for this field or Data Science Applications or the Most Common Mistakes, then<br>
-### :pushpin:**[This Video](https://www.youtube.com/watch?v=5zRvq7CG6Zw&t=5s) is for you (Highly Recommended :heavy_check_mark:)**
-
-
-<h2>Data Science vs Data Analytics vs Data Engineering - What's the Difference?</h2><br>
+### Data Science vs Data Analytics vs Data Engineering - What's the Difference?
   
 ![aaa](https://user-images.githubusercontent.com/92026137/163718013-30b3af7b-5b3c-4a08-a54e-1c81b994a5f6.png)
 
-<h4><i>These terms are wrongly used interchangeably among people. There are distinct differences:</i></h4>
+These terms are wrongly used interchangeably among people. There are distinct differences 
 
-| :small_orange_diamond:	**Data Science**        | :small_orange_diamond:	**Data Analytics**           | :small_orange_diamond:	**Data Engineering**           |
-| ------------- | --------------------- | -------------------- |
-|<h5>Is a multidisciplinary field that focuses on looking at raw and structured data sets and providing potential actionable insights. The field of Data Science looks at ensuring we are asking the right questions as opposed to finding exact answers.  Data Scientist require skillsets that are centered on Computer Science, Mathematics, and Statistics.  Data Scientist use several unique techniques to analyze data such as machine learning, trends, linear regressions, and predictive modeling.  The tools Data Scientist use to apply these techniques include Python and R.      </h5>|<h5> Focuses on looking at existing data sets and creating solutions to capture data, process data, and finally organize data to draw actionable insights. This field looks at finding general process, business, and engineering improvements we can make based on questions we don't know the answers to.  Data Analytics require skillsets that are centered on Statistics, Mathematics, and high level understanding of Computer Science. It involves data cleaning, data visualization, and simple modeling.  Common Data Analytic tools used include Microsoft Power Bi, Tableau, and SQL.  </h5>|<h5> Focuses on creating the correct infrastructure and tools required to support the business.  Data Engineers look at what are the optimal ways to store and extract data and involves writing scripts and building data warehouses.  Data Engineering require skillsets that are centered on Software Engineering, Computer Science and high level Data Science.  The tools Data Engineers utilize are mainly Python, Java, Scala, Hadoop, and Spark. </h5>|
+#### **Data Science**
 
-# Prepare your workspace
-<details><summary> <h3>Tip :one:	: Pick one and stick to it. (:file_folder:Click)</h3>
-</summary>
-<br>
-  
-[Anaconda](https://www.anaconda.com/products/distribution): It’s a tool kit that fulfills all your necessities in writing and running code. From Powershell prompt to Jupyter Notebook and PyCharm, even R Studio (if interested to try R)
+Is a multidisciplinary field that focuses on looking at raw and structured data sets and providing potential actionable insights. The field of Data Science looks at ensuring we are asking the right questions as opposed to finding exact answers.  Data Scientist require skillsets that are centered on Computer Science, Mathematics, and Statistics.  Data Scientist use several unique techniques to analyze data such as machine learning, trends, linear regressions, and predictive modeling.  The tools Data Scientist use to apply these techniques include Python and R.
 
-![a](https://user-images.githubusercontent.com/92026137/163717819-4689c927-6022-47da-b204-169693bfa397.png)
+#### **Data Analytics**
 
+Focuses on looking at existing data sets and creating solutions to capture data, process data, and finally organize data to draw actionable insights. This field looks at finding general process, business, and engineering improvements we can make based on questions we don't know the answers to.  Data Analytics require skillsets that are centered on Statistics, Mathematics, and high level understanding of Computer Science. It involves data cleaning, data visualization, and simple modeling.  Common Data Analytic tools used include Microsoft Power Bi, Tableau, and SQL.
 
-[Atom](https://atom.io/packages/ide-python): A more advanced Python interface, highly recommended by experts. <br />
-[Google Colab](https://colab.research.google.com/notebooks/intro.ipynb): It’s like a Jupyter Notebook but in the cloud. You don’t need to install anything locally. All the important libraries are already installed. For example NumPy, Pandas, Matplotlib, and Sci-kit Learn <br />
-[PyCharm](https://www.jetbrains.com/): PyCharm is another excellent IDE that enables you to integrate with libraries such as NumPy and Matplotlib, allowing you to work with array viewers and interactive plots. <br />
-[Thonny](https://thonny.org/): Thonny is an IDE for teaching and learning programming. Thonny is equipped with a debugger, and supports code completion, and highlights syntax errors.</details>
-Most learning platforms have integrated code exercises where you don’t need to install anything locally. But to learn it right, you should have an IDE installed on your local machine. Suggestions will be a marketplace with many options and few improvements from one platform to another.
+#### **Data Engineering**
 
-### Tip :two:	: Focus on one course at least.
-### Tip :three: : Don’t chase certifications.
-### Tip :four: : Don’t rush for ML without having a good background in programming & maths.
-
-
-## This track is divided into 3 phases :arrow_down:	:
-
-#### &emsp; 1. Beginner: you get a basic understanding of data analysis, tools and techniques.
-#### &emsp; 2. Intermediate: dive deeper in more complex topics of ML, Math and data engineering.
-#### &emsp; 3. Advanced: where we learn more advanced Math, DL and Deployment.
-
-:bell: For Data Camp courses, github student pack gives 3 free months. Google how to get it.<br> <i>if you already used it, do not hesitate to contact us to have an account with free access.:hibiscus:</i>
-  
-
-## Legend
-* :video_camera: Video Content
-* :closed_book: Online Article Content / Book
-### 💡 Roadmap Explanation ▶️ [Youtube Video](https://youtu.be/HbIPJuvzRLk) :movie_camera:<img src="https://media.giphy.com/media/mBYkXvLxkHZFmqBHIC/giphy.gif" width=50px height=40px>
-
+Focuses on creating the correct infrastructure and tools required to support the business.  Data Engineers look at what are the optimal ways to store and extract data and involves writing scripts and building data warehouses.  Data Engineering require skillsets that are centered on Software Engineering, Computer Science and high level Data Science.  The tools Data Engineers utilize are mainly Python, Java, Scala, Hadoop, and Spark.
 
 ## 🔰 Beginner 🔰
 
-
-
 ### Schedule
 
-| Week | Topic | Resources |
-|------|-------|-----------|
-| **Month 1: Foundations and Basic Tools** |
-| 1 | Introduction to Data Science | [Intro to Descriptive Statistics](https://www.udacity.com/course/intro-to-descriptive-statistics--ud827), [Online Statistics Education](http://onlinestatbook.com/Online_Statistics_Education.pdf) |
-| 2 | Descriptive Statistics | [Statistics Fundamentals - StatQuest - Youtube](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9), [Intro to Descriptive Statistics Article1](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fdescriptive-statistics-f2beeaf7a8df), [Article2](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fintro-to-descriptive-statistics-252e9c464ac9) |
-| 3 | Probability | [Khan Academy Probability](https://www.khanacademy.org/math/statistics-probability/probability-library), [Introduction to Probability](https://drive.google.com/file/d/15Y0oFNHQRls1qvQNvO3DFLJVhIZvUjTD/view?usp=sharing) |
-| 4 | Programming Languages - Python | [Introduction to Python Programming](https://www.udacity.com/course/introduction-to-python--ud1110), [Intro to Python for CS and Data Science](https://drive.google.com/file/d/1rXkYFjw1iKbXCra_B4Ykm0AMRgo6v93w/view?fbclid=IwAR2lg9omGaAsG3g1ZhHQHja8_uxkZ7QddnOUSxfoceRXShU1V_bl4V63xCQ) |
-| **Month 2: Data Manipulation and Visualization** |
-| 5 | Pandas | [Corey Schafer-Youtube](https://www.youtube.com/watch?v=ZyhVh-qRZPA&list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS), [Kaggle Pandas](https://www.kaggle.com/learn/pandas) |
-| 6 | Numpy | [NumPy Tutorial by Keith Galli - YouTube](https://www.youtube.com/watch?v=5-5CrLmf2vk&list=PLIA_seGogbkGDYq-dnVCsELEIq_7HK7Ca), [Kaggle Numpy](https://www.kaggle.com/legendadnan/numpy-tutorial-for-beginners-data-science) |
-| 7 | Data Cleaning | [Course 1](https://www.datacamp.com/courses/cleaning-data-in-python), [The Ultimate Guide to Data Cleaning](https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4) |
-| 8 | Data Visualization | [Introduction to Data Visualization with Matplotlib](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib), [Kaggle Data Visualization with Seaborn](https://www.kaggle.com/learn/data-visualization) |
-| **Month 3: Advanced Topics and Projects** |
-| 9 | Exploratory Data Analysis (EDA) | [DataCamp-EDA in Python](https://learn.datacamp.com/courses/exploratory-data-analysis-in-python), [IBM-EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning) |
-| 10 | Dashboards | [Power BI - Youtube (Alex)](https://youtube.com/playlist?list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&si=pR4VSrR1P2O-AaBJ), [Tutorial on Tableau](https://www.datacamp.com/community/tutorials/data-visualisation-tableau) |
-| 11 | SQL and Databases | [SQL for Data Analysis - Udacity](https://www.udacity.com/course/sql-for-data-analysis--ud198), [SQL for Data Analysis Book](https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/blob/main/Books/SQL%20for%20Data%20Analysis.pdf) |
-| 12 | Project Implementation | Apply what you've learned on a project, Choose a dataset and perform EDA, data cleaning, and visualization, Document your findings and present your results |
+| Month/Week                                                       | Topic                           | Resources                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Month 1**<td colspan=3>**Foundations and Basic Tools**         |
+| 1                                                                | Introduction to Data Science    | [Intro to Descriptive Statistics](https://www.udacity.com/course/intro-to-descriptive-statistics--ud827), [Online Statistics Education](http://onlinestatbook.com/Online_Statistics_Education.pdf)                                                                                                                                                                                                                                                   |
+| 2                                                                | Descriptive Statistics          | [Statistics Fundamentals - StatQuest - Youtube](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9), [Intro to Descriptive Statistics Article1](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fdescriptive-statistics-f2beeaf7a8df), [Article2](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fintro-to-descriptive-statistics-252e9c464ac9) |
+| 3                                                                | Probability                     | [Khan Academy Probability](https://www.khanacademy.org/math/statistics-probability/probability-library), [Introduction to Probability](https://drive.google.com/file/d/15Y0oFNHQRls1qvQNvO3DFLJVhIZvUjTD/view?usp=sharing)                                                                                                                                                                                                                           |
+| 4                                                                | Programming Languages - Python  | [Introduction to Python Programming](https://www.udacity.com/course/introduction-to-python--ud1110), [Intro to Python for CS and Data Science](https://drive.google.com/file/d/1rXkYFjw1iKbXCra_B4Ykm0AMRgo6v93w/view?fbclid=IwAR2lg9omGaAsG3g1ZhHQHja8_uxkZ7QddnOUSxfoceRXShU1V_bl4V63xCQ)                                                                                                                                                          |
+| **Month 2**<td colspan=3>**Data Manipulation and Visualization** |
+| 5                                                                | Pandas                          | [Corey Schafer-Youtube](https://www.youtube.com/watch?v=ZyhVh-qRZPA&list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS), [Kaggle Pandas](https://www.kaggle.com/learn/pandas)                                                                                                                                                                                                                                                                                   |
+| 6                                                                | Numpy                           | [NumPy Tutorial by Keith Galli - YouTube](https://www.youtube.com/watch?v=5-5CrLmf2vk&list=PLIA_seGogbkGDYq-dnVCsELEIq_7HK7Ca), [Kaggle Numpy](https://www.kaggle.com/legendadnan/numpy-tutorial-for-beginners-data-science)                                                                                                                                                                                                                         |
+| 7                                                                | Data Cleaning                   | [Course 1](https://www.datacamp.com/courses/cleaning-data-in-python), [The Ultimate Guide to Data Cleaning](https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4)                                                                                                                                                                                                                                                         |
+| 8                                                                | Data Visualization              | [Introduction to Data Visualization with Matplotlib](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib), [Kaggle Data Visualization with Seaborn](https://www.kaggle.com/learn/data-visualization)                                                                                                                                                                                                           |
+| **Month 3**<td colspan=3>**Advanced Topics and Projects**        |
+| 9                                                                | Exploratory Data Analysis (EDA) | [DataCamp-EDA in Python](https://learn.datacamp.com/courses/exploratory-data-analysis-in-python), [IBM-EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning)                                                                                                                                                                                                                                  |
+| 10                                                               | Dashboards                      | [Power BI - Youtube (Alex)](https://youtube.com/playlist?list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&si=pR4VSrR1P2O-AaBJ), [Tutorial on Tableau](https://www.datacamp.com/community/tutorials/data-visualisation-tableau)                                                                                                                                                                                                                                |
+| 11                                                               | SQL and Databases               | [SQL for Data Analysis - Udacity](https://www.udacity.com/course/sql-for-data-analysis--ud198), [SQL for Data Analysis Book](https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/blob/main/Books/SQL%20for%20Data%20Analysis.pdf)                                                                                                                                                                                                               |
+| 12                                                               | Project Implementation          | Apply what you've learned on a project, Choose a dataset and perform EDA, data cleaning, and visualization, Document your findings and present your results                                                                                                                                                                                                                                                                                          |
 
 ### Content
 
@@ -384,11 +348,11 @@ Deep Learning - MIT](http://introtodeeplearning.com/?fbclid=IwAR35rIygYlCn84DV7m
 <h3>📌 Common Tools ⤵️</h3><br>
 <img align="right" width="158" height="85" src="https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/assets/92026137/38a970a5-e723-4831-bc35-153c228beebf">
 
-English | Arabic | Book
---- | --- | ---
-:movie_camera: [Git - Udacity](https://www.udacity.com/course/version-control-with-git--ud123) | :movie_camera: [شخبط وانت مطمن ](https://www.youtube.com/watch?v=Q6G-J54vgKc)🚀 | :closed_book: [Pro Git](https://git-scm.com/book/en/v2)
-📖 [w3schools](https://www.w3schools.com/git/) | :movie_camera: [almadrasa](https://almdrasa.com/tracks/programming-foundations/courses/git-github/)
-&emsp; | :movie_camera: [Elzero](https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF) 
+| English                                                                                        | Arabic                                                                                              | Book                                                    |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| :movie_camera: [Git - Udacity](https://www.udacity.com/course/version-control-with-git--ud123) | :movie_camera: [شخبط وانت مطمن ](https://www.youtube.com/watch?v=Q6G-J54vgKc)🚀                      | :closed_book: [Pro Git](https://git-scm.com/book/en/v2) |
+| 📖 [w3schools](https://www.w3schools.com/git/)                                                  | :movie_camera: [almadrasa](https://almdrasa.com/tracks/programming-foundations/courses/git-github/) |
+| &emsp;                                                                                         | :movie_camera: [Elzero](https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF)   |
 
 ***       
 ### :pushpin: **More Books :atom::atom: [:pushpin: Check This!](https://drive.google.com/drive/folders/1iW7IPrVUqsHumgXUMH_rgeBLpJjRDCmJ?usp=sharing)** 	<br>
@@ -482,25 +446,25 @@ When we talk about top data science competitions, [**Kaggle**](https://www.kaggl
 
 <br>
 
-Podcasts  | About      | Produced by
--- | --------------------------- | --
-[Data Science at Home](https://datascienceathome.com/)|A podcast that provides practical advice and tutorials on data science topics.|Greg Linhardt, a data scientist and machine learning engineer at Google AI
-[Data Stories](https://datastori.es/)|An interview-driven podcast that tells the stories of data scientists and how they're using their skills to make a difference in the world.| Kirill Eremenko, a data scientist and machine learning engineer at Netflix
-[O'Reilly Data Show](https://www.oreilly.com/radar/topics/oreilly-data-show-podcast/)|A podcast that covers a wide range of data science topics, from machine learning to artificial intelligence to big data.|Ben Lorica, the Chief Data Scientist at O'Reilly
-[Learning Machines 101](https://www.learningmachines101.com/) |Mathematics, statistics, and algorithms that power the machine learning systems that we rely on every day.|Richard Golden, a machine learning engineer and researcher at Google AI
-[Data Engineering Podcast](https://www.dataengineeringpodcast.com/) |Tools, techniques, and difficulties associated with the discipline of data engineering. Databases, workflows, automation, and data manipulation.|Tobias Macey, a data engineer at Netflix
-[Data Science Mixer](https://community.alteryx.com/t5/Data-Science-Mixer/bg-p/mixer)  |A great resource for anyone who wants to learn more about data science and the latest trends in the field. It is also a great way to get inspired by the work of other data scientists and machine learning engineers.|Alteryx, a data science and analytics software company
-[Chai Time Data Science Show](https://www.youtube.com/playlist?list=PLLvvXm0q8zUbiNdoIazGzlENMXvZ9bd3x) |Interviews top data scientists, practitioners, and researchers from around the world.|Sanyam Bhutani, a data scientist and machine learning engineer at Google AI.
-[Becoming a Data Scientist](https://www.becomingadatascientist.com/category/podcast/)|Podcast that interviews data scientists about their journey to becoming a data scientist.|Renee Teate, a data scientist and machine learning engineer at Google AI.
-[AI Today Podcast](https://www.aidatatoday.com/aitoday/)|Explores the latest trends and developments in artificial intelligence.|Ron Schmelzer and Kathleen Walch
-[Gradient Dissent](https://wandb.ai/fully-connected/podcast)|A weekly podcast that explores the latest research in machine learning and artificial intelligence.|Chris Olah, a machine learning engineer at Google AI
-[Data Skeptic](https://dataskeptic.com/)|A podcast that challenges the conventional wisdom in data science and asks tough questions about the ethics and implications of data-driven decision making.|Kyle Polich, a data scientist and machine learning engineer
-[Linear Digressions](https://lineardigressions.com/)|A podcast that covers a wide range of data science topics, from the technical to the theoretical.|Ben Recht and Noah Smith, two machine learning researchers at the University of California, Berkeley
-[The Data Engineering Show](https://www.dataengineeringshow.com/)|For data engineering and BI practitioners to go beyond theory, and learn from the biggest influencers in tech about their practical day to day data challenges.|Eldad Farkash and Benjamin Wagner, who are both data engineering experts with experience at companies like Firebolt and Sisense
-[DataTalks.Club](https://podcasters.spotify.com/pod/show/datatalksclub)|A weekly online community of data enthusiasts and practitioners that learn from each other and share their knowledge and experiences through meetups, workshops, and a podcast.|A rotating cast of data experts
-[Datacast](https://jameskle.com/writes/category/Datacast)|Top data scientists and practitioners in the data and AI infrastructure space.|James Le, who is a data infrastructure expert with experience at companies like Google and Netflix
-[How to Get an Analytics Job Podcast](https://www.youtube.com/playlist?list=PLBvzkZLydYX0D28bbnfRCV6M4zMQrhXsd)|A great resource for anyone who is interested in a career in analytics. The guests share their insights and advice on how to get started in analytics and how to succeed in an analytics career.|John David Ariansen, an analytics agency owner and career coach
-[The Analytics Power Hour](https://analyticshour.io/)|Five awesome people, an occasional guest, and drinks all around tackling the hottest data and analytics topics of the day.|Tim Wilson, Michael Helbling, Josh Crowhurst, and Val Kroll. They are all analytics experts from different companies
+| Podcasts                                                                                                        | About                                                                                                                                                                                                                  | Produced by                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [Data Science at Home](https://datascienceathome.com/)                                                          | A podcast that provides practical advice and tutorials on data science topics.                                                                                                                                         | Greg Linhardt, a data scientist and machine learning engineer at Google AI                                                      |
+| [Data Stories](https://datastori.es/)                                                                           | An interview-driven podcast that tells the stories of data scientists and how they're using their skills to make a difference in the world.                                                                            | Kirill Eremenko, a data scientist and machine learning engineer at Netflix                                                      |
+| [O'Reilly Data Show](https://www.oreilly.com/radar/topics/oreilly-data-show-podcast/)                           | A podcast that covers a wide range of data science topics, from machine learning to artificial intelligence to big data.                                                                                               | Ben Lorica, the Chief Data Scientist at O'Reilly                                                                                |
+| [Learning Machines 101](https://www.learningmachines101.com/)                                                   | Mathematics, statistics, and algorithms that power the machine learning systems that we rely on every day.                                                                                                             | Richard Golden, a machine learning engineer and researcher at Google AI                                                         |
+| [Data Engineering Podcast](https://www.dataengineeringpodcast.com/)                                             | Tools, techniques, and difficulties associated with the discipline of data engineering. Databases, workflows, automation, and data manipulation.                                                                       | Tobias Macey, a data engineer at Netflix                                                                                        |
+| [Data Science Mixer](https://community.alteryx.com/t5/Data-Science-Mixer/bg-p/mixer)                            | A great resource for anyone who wants to learn more about data science and the latest trends in the field. It is also a great way to get inspired by the work of other data scientists and machine learning engineers. | Alteryx, a data science and analytics software company                                                                          |
+| [Chai Time Data Science Show](https://www.youtube.com/playlist?list=PLLvvXm0q8zUbiNdoIazGzlENMXvZ9bd3x)         | Interviews top data scientists, practitioners, and researchers from around the world.                                                                                                                                  | Sanyam Bhutani, a data scientist and machine learning engineer at Google AI.                                                    |
+| [Becoming a Data Scientist](https://www.becomingadatascientist.com/category/podcast/)                           | Podcast that interviews data scientists about their journey to becoming a data scientist.                                                                                                                              | Renee Teate, a data scientist and machine learning engineer at Google AI.                                                       |
+| [AI Today Podcast](https://www.aidatatoday.com/aitoday/)                                                        | Explores the latest trends and developments in artificial intelligence.                                                                                                                                                | Ron Schmelzer and Kathleen Walch                                                                                                |
+| [Gradient Dissent](https://wandb.ai/fully-connected/podcast)                                                    | A weekly podcast that explores the latest research in machine learning and artificial intelligence.                                                                                                                    | Chris Olah, a machine learning engineer at Google AI                                                                            |
+| [Data Skeptic](https://dataskeptic.com/)                                                                        | A podcast that challenges the conventional wisdom in data science and asks tough questions about the ethics and implications of data-driven decision making.                                                           | Kyle Polich, a data scientist and machine learning engineer                                                                     |
+| [Linear Digressions](https://lineardigressions.com/)                                                            | A podcast that covers a wide range of data science topics, from the technical to the theoretical.                                                                                                                      | Ben Recht and Noah Smith, two machine learning researchers at the University of California, Berkeley                            |
+| [The Data Engineering Show](https://www.dataengineeringshow.com/)                                               | For data engineering and BI practitioners to go beyond theory, and learn from the biggest influencers in tech about their practical day to day data challenges.                                                        | Eldad Farkash and Benjamin Wagner, who are both data engineering experts with experience at companies like Firebolt and Sisense |
+| [DataTalks.Club](https://podcasters.spotify.com/pod/show/datatalksclub)                                         | A weekly online community of data enthusiasts and practitioners that learn from each other and share their knowledge and experiences through meetups, workshops, and a podcast.                                        | A rotating cast of data experts                                                                                                 |
+| [Datacast](https://jameskle.com/writes/category/Datacast)                                                       | Top data scientists and practitioners in the data and AI infrastructure space.                                                                                                                                         | James Le, who is a data infrastructure expert with experience at companies like Google and Netflix                              |
+| [How to Get an Analytics Job Podcast](https://www.youtube.com/playlist?list=PLBvzkZLydYX0D28bbnfRCV6M4zMQrhXsd) | A great resource for anyone who is interested in a career in analytics. The guests share their insights and advice on how to get started in analytics and how to succeed in an analytics career.                       | John David Ariansen, an analytics agency owner and career coach                                                                 |
+| [The Analytics Power Hour](https://analyticshour.io/)                                                           | Five awesome people, an occasional guest, and drinks all around tackling the hottest data and analytics topics of the day.                                                                                             | Tim Wilson, Michael Helbling, Josh Crowhurst, and Val Kroll. They are all analytics experts from different companies            |
 </details>
 
 <br>
