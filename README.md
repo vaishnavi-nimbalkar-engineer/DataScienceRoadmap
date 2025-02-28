@@ -1,4 +1,3 @@
-<img align="center" width="730" height="720" src="https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/assets/92026137/95f2d5a6-990b-46cf-90c1-098059a9c706">
 <h2>&emsp;&emsp;&emsp;&emsp; DATA SCIENCE ROADMAP :pirate_flag: 2025 </h2>
  
 ### Data Science Roadmap for anyone interested in how to break into the field!
@@ -56,9 +55,32 @@ Most learning platforms have integrated code exercises where you don’t need to
 * :closed_book: Online Article Content / Book
 ### 💡 Roadmap Explanation ▶️ [Youtube Video](https://youtu.be/HbIPJuvzRLk) :movie_camera:<img src="https://media.giphy.com/media/mBYkXvLxkHZFmqBHIC/giphy.gif" width=50px height=40px>
 
-***
 
 ## 🔰 Beginner 🔰
+
+
+
+### Schedule
+
+| Week | Topic | Resources |
+|------|-------|-----------|
+| **Month 1: Foundations and Basic Tools** |
+| 1 | Introduction to Data Science | [Intro to Descriptive Statistics](https://www.udacity.com/course/intro-to-descriptive-statistics--ud827), [Online Statistics Education](http://onlinestatbook.com/Online_Statistics_Education.pdf) |
+| 2 | Descriptive Statistics | [Statistics Fundamentals - StatQuest - Youtube](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9), [Intro to Descriptive Statistics Article1](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fdescriptive-statistics-f2beeaf7a8df), [Article2](https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fintro-to-descriptive-statistics-252e9c464ac9) |
+| 3 | Probability | [Khan Academy Probability](https://www.khanacademy.org/math/statistics-probability/probability-library), [Introduction to Probability](https://drive.google.com/file/d/15Y0oFNHQRls1qvQNvO3DFLJVhIZvUjTD/view?usp=sharing) |
+| 4 | Programming Languages - Python | [Introduction to Python Programming](https://www.udacity.com/course/introduction-to-python--ud1110), [Intro to Python for CS and Data Science](https://drive.google.com/file/d/1rXkYFjw1iKbXCra_B4Ykm0AMRgo6v93w/view?fbclid=IwAR2lg9omGaAsG3g1ZhHQHja8_uxkZ7QddnOUSxfoceRXShU1V_bl4V63xCQ) |
+| **Month 2: Data Manipulation and Visualization** |
+| 5 | Pandas | [Corey Schafer-Youtube](https://www.youtube.com/watch?v=ZyhVh-qRZPA&list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS), [Kaggle Pandas](https://www.kaggle.com/learn/pandas) |
+| 6 | Numpy | [NumPy Tutorial by Keith Galli - YouTube](https://www.youtube.com/watch?v=5-5CrLmf2vk&list=PLIA_seGogbkGDYq-dnVCsELEIq_7HK7Ca), [Kaggle Numpy](https://www.kaggle.com/legendadnan/numpy-tutorial-for-beginners-data-science) |
+| 7 | Data Cleaning | [Course 1](https://www.datacamp.com/courses/cleaning-data-in-python), [The Ultimate Guide to Data Cleaning](https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4) |
+| 8 | Data Visualization | [Introduction to Data Visualization with Matplotlib](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib), [Kaggle Data Visualization with Seaborn](https://www.kaggle.com/learn/data-visualization) |
+| **Month 3: Advanced Topics and Projects** |
+| 9 | Exploratory Data Analysis (EDA) | [DataCamp-EDA in Python](https://learn.datacamp.com/courses/exploratory-data-analysis-in-python), [IBM-EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning) |
+| 10 | Dashboards | [Power BI - Youtube (Alex)](https://youtube.com/playlist?list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&si=pR4VSrR1P2O-AaBJ), [Tutorial on Tableau](https://www.datacamp.com/community/tutorials/data-visualisation-tableau) |
+| 11 | SQL and Databases | [SQL for Data Analysis - Udacity](https://www.udacity.com/course/sql-for-data-analysis--ud198), [SQL for Data Analysis Book](https://github.com/Moataz-Elmesmary/Data-Science-Roadmap/blob/main/Books/SQL%20for%20Data%20Analysis.pdf) |
+| 12 | Project Implementation | Apply what you've learned on a project, Choose a dataset and perform EDA, data cleaning, and visualization, Document your findings and present your results |
+
+### Content
 
 [Algorithms Book](https://github.com/cjbt/Free-Algorithm-Books/blob/master/book/Grokking%20Algorithms%20-%20An%20illustrated%20guide%20for%20programmers%20and%20other%20curious%20people.pdf) <i>Every piece of code could be called an algorithm, but this book covers the
 more interesting bits.</i><br>
