@@ -11,9 +11,7 @@ covid_data = pd.read_csv(url)
 covid_data['date'] = pd.to_datetime(covid_data['date'])
 countries_of_interest = ['United States', 'India', 'Brazil', 'United Kingdom', 'Russia']
 filtered_data = covid_data[covid_data['location'].isin(countries_of_interest)]
-
-# Analyze cases over time
-plt.figure(figsize=(12, 6))
+ 
 for country in countries_of_interest:
     country_data = filtered_data[filtered_data['location'] == country]
     plt.plot(country_data['date'], country_data['new_cases_smoothed'], label=country)

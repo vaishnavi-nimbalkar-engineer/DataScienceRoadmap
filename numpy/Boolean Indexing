@@ -1,0 +1,11 @@
+#Filtering Elements
+import numpy as np
+arr = np.array([10, 15, 20, 25, 30])
+filtered_arr = arr[arr > 20]
+print("Elements greater than 20:", filtered_arr)
+
+
+# Using Boolean Mask
+
+mask = arr % 2 == 0
+print("Even elements:", arr[mask])

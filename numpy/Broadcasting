@@ -1,0 +1,11 @@
+#Adding Scalar to Array
+import numpy as np
+arr = np.array([1, 2, 3])
+print("Add 5 to each element:", arr + 5)
+
+
+#Broadcasting with Different Shapes
+
+a = np.array([[1], [2], [3]])
+b = np.array([10, 20, 30])
+print("Broadcasted Addition:\n", a + b)

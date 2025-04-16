@@ -1,0 +1,12 @@
+#Specifying Data Type
+import numpy as np
+# Creating an array with integer data type
+arr = np.array([1, 2, 3], dtype=float)
+print("Array with float data type:", arr)
+
+
+
+
+# Checking Data Type
+
+print("Data type of array elements:", arr.dtype)

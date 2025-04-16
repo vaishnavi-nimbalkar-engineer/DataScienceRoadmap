@@ -1,0 +1,12 @@
+#Reshape 1D to 2D
+import numpy as np
+arr = np.arange(6)
+reshaped_arr = arr.reshape((2, 3))
+print("Reshaped Array:\n", reshaped_arr)
+
+
+
+#Flattening a 2D Array
+
+flattened_arr = reshaped_arr.reshape(-1)
+print("Flattened Array:", flattened_arr)

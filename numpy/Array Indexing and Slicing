@@ -1,0 +1,8 @@
+# Array Indexing 
+import numpy as np
+arr = np.array([10, 20, 30, 40, 50])
+print("Element at index 2:", arr[2])  # Output: 30
+
+
+# Array Slicing
+print("Elements from index 1 to 3:", arr[1:4])  # Output: [20 30 40]

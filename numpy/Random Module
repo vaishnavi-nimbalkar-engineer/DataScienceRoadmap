@@ -1,0 +1,11 @@
+#Random Integers
+import numpy as np
+rand_ints = np.random.randint(0, 100, size=5)
+print("Random Integers:", rand_ints)
+
+
+
+# Random Floats
+
+rand_floats = np.random.rand(3)
+print("Random Floats:", rand_floats)

@@ -1,0 +1,11 @@
+#Dot Product
+import numpy as np
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[2, 0], [1, 2]])
+dot_product = np.dot(a, b)
+print("Dot Product:\n", dot_product)
+
+
+# Transpose
+
+print("Transpose of matrix a:\n", a.T)

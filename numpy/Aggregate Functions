@@ -1,0 +1,10 @@
+ #Mean and Standard Deviation
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print("Mean:", np.mean(arr))
+print("Standard Deviation:", np.std(arr))
+
+# Sum and Maximum
+
+print("Sum:", np.sum(arr))
+print("Maximum:", np.max(arr))
