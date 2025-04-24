@@ -1,3 +1,5 @@
+# Interview Questions
+
 ## 1. Python Fundamentals & Pandas
 
 ### 1.1 Explain the difference between a list, tuple, set, and dictionary in Python.
@@ -667,3 +669,871 @@ I refactored exploratory notebooks into modular code, containerized with Docker,
 
 #### Answer 2:
 I wrapped model training and inference in Airflow tasks, added monitoring, CI tests, and automated data validation before deployments.
+
+# Interview Questions, Part II
+
+## 1. Python Fundamentals
+
+### 1.1 What is the difference between `append` and `extend` on Python lists?
+**A:** `append` adds its argument as a single element; `extend` iterates over its argument adding each element.
+
+### 1.2 How does Python’s garbage collector manage memory?
+**A:** It uses reference counting plus a generational cycle-detecting GC to reclaim cyclically referenced objects.
+
+### 1.3 When would you use a list versus a tuple?
+**A:** Use a list for mutable sequences; use a tuple for immutable, hashable collections or fixed data.
+
+### 1.4 How do you handle exceptions with multiple `except` blocks?
+**A:** Place more specific exception types first, then broader exceptions or group multiple in a tuple.
+
+### 1.5 Explain slicing syntax `my_list[start:stop:step]`.
+**A:** It returns elements from `start` up to but excluding `stop`, advancing by `step` each time.
+
+### 1.6 How do you flatten a nested list in Python?
+**A:** With a list comprehension: `[y for x in nested for y in x]` (only one level deep).
+
+### 1.7 Write a function to flatten a nested list of arbitrary depth.
+```python
+def flatten(lst):
+    result = []
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+    return result
+
+# flatten([1, [2, [3, 4]], 5]) -> [1, 2, 3, 4, 5]
+```
+
+### 1.8 Implement a decorator that logs function execution time.
+```python
+import time
+from functools import wraps
+
+def timer(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} took {time.time()-start:.4f}s")
+        return result
+    return wrapper
+
+@timer
+def slow():
+    time.sleep(1)
+
+# slow() prints: slow took 1.0001s
+```
+
+## 2. Pandas
+
+### 2.1 How do you convert a column to datetime in Pandas?
+**A:** Use `pd.to_datetime(df["col"], format="…")` to parse strings into `datetime64[ns]`.
+
+### 2.2 What does `df.merge()` do versus `df.join()`?
+**A:** `merge()` performs SQL-style joins on columns; `join()` aligns DataFrames on their index by default.
+
+### 2.3 How can you rename multiple columns at once in a DataFrame?
+**A:** Use `df.rename(columns={"old1":"new1","old2":"new2"}, inplace=True)`.
+
+### 2.4 Explain the difference between `df.apply()` and `df.transform()`.
+**A:** `apply()` can reduce or transform groups arbitrarily; `transform()` returns an output with the same index shape.
+
+### 2.5 How do you pivot a DataFrame from long to wide format?
+**A:** Use `df.pivot(index="row", columns="col", values="val")`.
+
+### 2.6 Describe chaining operations in Pandas and when it’s useful.
+**A:** You can `df.dropna().assign(...).groupby(...)` to build concise, readable pipelines without intermediate variables.
+
+### 2.7 How do you sample a fraction of rows randomly in a DataFrame?
+**A:** Use `df.sample(frac=0.1, random_state=42)`.
+
+### 2.8 How do you inspect memory usage of a DataFrame?
+**A:** Call `df.info(memory_usage="deep")` or `df.memory_usage(deep=True)`.
+
+### 2.9 What is the purpose of `df.query()`?
+**A:** To filter rows using a string expression, e.g. `df.query("col > 0")`.
+
+### 2.10 How can you merge rows with identical keys?
+**A:** Use `df.groupby("key").agg({"col1":"sum","col2":"mean"})`.
+
+### 2.11 Create a DataFrame of 100 random integers and compute the rolling mean with window size 5.
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({'vals': np.random.randint(0,100,size=100)})
+df['rolling_mean'] = df['vals'].rolling(window=5).mean()
+```
+
+### 2.12 Using Pandas, read a large CSV in chunks of 10 000 rows and count total rows without loading all into memory.
+```python
+import pandas as pd
+
+row_count = 0
+for chunk in pd.read_csv('large.csv', chunksize=10000):
+    row_count += len(chunk)
+print(row_count)
+```
+
+---
+## 2. Machine Learning with scikit-learn
+
+### 2.1 Explain the bias–variance tradeoff.
+**A:** Bias is underfitting error; variance is overfitting error. You tune model complexity to minimize total error.
+
+### 2.2 What is stratified k-fold cross-validation?
+**A:** It splits data so each fold preserves the target class distribution.
+
+### 2.3 When to use `StandardScaler` vs `MinMaxScaler`?
+**A:** `StandardScaler` centers to zero mean and unit variance; `MinMaxScaler` scales to a fixed range [0,1].
+
+### 2.4 How does `LabelEncoder` differ from `OneHotEncoder`?
+**A:** `LabelEncoder` maps categories to integer codes; `OneHotEncoder` creates binary indicator columns.
+
+### 2.5 Describe how `Pipeline` prevents data leakage.
+**A:** It ensures transforms (e.g. scaling, imputation) are learned only on training folds during CV.
+
+### 2.6 How do you handle categorical features with high cardinality?
+**A:** Use target encoding, embeddings, or frequency encoding instead of one-hot.
+
+### 2.7 What metrics are suitable for imbalanced classification?
+**A:** F1-score, ROC AUC, precision–recall AUC.
+
+### 2.8 How can you parallelize model training?
+**A:** Set `n_jobs=-1` in estimators like `RandomForestClassifier`.
+
+### 2.9 Explain the difference between bagging and boosting.
+**A:** Bagging builds base learners in parallel (reducing variance); boosting builds sequentially (reducing bias).
+
+### 2.10 How to detect multicollinearity?
+**A:** Compute Variance Inflation Factor (VIF) or inspect a correlation matrix.
+
+### 2.11 How do you calibrate predicted probabilities?
+**A:** Use `CalibratedClassifierCV` with `"sigmoid"` or `"isotonic"` methods.
+
+### 2.12 Describe how `SelectFromModel` works.
+**A:** It selects features whose importance (from a fitted estimator) exceeds a threshold.
+
+### 2.13 How to handle missing values in scikit-learn?
+**A:** Use `SimpleImputer` or `IterativeImputer` within a `Pipeline`.
+
+### 2.14 Explain partial dependence plots.
+**A:** They show the marginal effect of one or two features on the predicted outcome.
+
+### 2.15 How to implement early stopping in GradientBoosting?
+**A:** Set `n_iter_no_change` and `validation_fraction` parameters.
+
+### 2.16 What is the `feature_importances_` attribute?
+**A:** It gives relative importance scores for features in tree-based models.
+
+### 2.17 Split data, train a RandomForest, and output feature importances.
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+X, y = df.drop('target', axis=1), df['target']
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+clf = RandomForestClassifier(n_estimators=100, random_state=42).fit(X_train, y_train)
+importances = pd.Series(clf.feature_importances_, index=X.columns).sort_values(ascending=False)
+print(importances.head())
+```
+
+### 2.18 Build a `GridSearchCV` to tune an SVM’s `C` and `kernel`.
+```python
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
+
+param_grid = {'C':[0.1,1,10], 'kernel':['linear','rbf']}
+grid = GridSearchCV(SVC(), param_grid, cv=5)
+grid.fit(X_train, y_train)
+print(grid.best_params_)
+```
+
+### 2.19 Create an imbalanced dataset sampler using SMOTE.
+```python
+from imblearn.over_sampling import SMOTE
+
+sm = SMOTE(random_state=42)
+X_res, y_res = sm.fit_resample(X_train, y_train)
+```
+
+### 2.20 Use `Pipeline` to chain imputation, scaling, and logistic regression.
+```python
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+
+pipe = Pipeline([
+    ('impute', SimpleImputer()),
+    ('scale', StandardScaler()),
+    ('clf', LogisticRegression())
+])
+pipe.fit(X_train, y_train)
+```
+
+---
+
+## 9. Natural Language Processing (NLP)
+
+### 9.1 Tokenize a sentence using NLTK’s `word_tokenize`
+```python
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import word_tokenize
+
+text = "Natural Language Processing is fascinating!"
+tokens = word_tokenize(text)
+print(tokens)
+# ['Natural', 'Language', 'Processing', 'is', 'fascinating', '!']
+```
+
+### 9.2 Remove English stopwords from a list of tokens
+```python
+import nltk
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+
+tokens = ['this', 'is', 'a', 'sample', 'text']
+stops = set(stopwords.words('english'))
+filtered = [t for t in tokens if t.lower() not in stops]
+print(filtered)
+# ['sample', 'text']
+```
+
+### 9.3 Lemmatize words using spaCy
+```python
+import spacy
+nlp = spacy.load('en_core_web_sm')
+doc = nlp("The striped bats are hanging on their feet.")
+lemmas = [token.lemma_ for token in doc]
+print(lemmas)
+# ['the', 'striped', 'bat', 'be', 'hang', 'on', 'their', 'foot', '.']
+```
+
+### 9.4 Compute a TF–IDF matrix for a corpus with scikit-learn
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+corpus = [
+    "I love machine learning.",
+    "Natural language processing with Python.",
+    "Deep learning models are powerful."
+]
+vec = TfidfVectorizer(stop_words='english')
+X = vec.fit_transform(corpus)
+print(X.toarray())
+print(vec.get_feature_names_out())
+```
+
+### 9.5 Train a simple logistic regression sentiment classifier (binary labels)
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+
+pipeline = Pipeline([
+    ('vect', CountVectorizer()),
+    ('clf', LogisticRegression())
+])
+texts = ["I love it", "I hate it"]
+labels = [1, 0]
+pipeline.fit(texts, labels)
+print(pipeline.predict(["I love this tool", "I dislike bugs"]))
+# [1 0]
+```
+
+### 9.6 Generate word embeddings with Gensim’s Word2Vec
+```python
+from gensim.models import Word2Vec
+
+sentences = [
+    ["natural", "language", "processing"],
+    ["machine", "learning", "models"],
+    ["word2vec", "embeddings"]
+]
+model = Word2Vec(sentences, vector_size=50, window=2, min_count=1, workers=1)
+print(model.wv['language'])      # 50-dimensional vector
+print(model.wv.most_similar('language'))
+```
+
+### 9.7 Use a pretrained Transformer to embed sentences with HuggingFace
+```python
+from transformers import AutoTokenizer, AutoModel
+import torch
+
+tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+
+sentences = ["Hello world", "NLP is fun"]
+inputs = tokenizer(sentences, padding=True, return_tensors="pt")
+outputs = model(**inputs)
+embeddings = outputs.last_hidden_state.mean(dim=1)
+print(embeddings.shape)  # (2, 384)
+```
+
+### 9.8 Build a simple RNN text classifier in PyTorch
+```python
+import torch.nn as nn
+import torch
+
+class RNNClassifier(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_dim, n_classes):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        self.rnn = nn.RNN(embed_dim, hidden_dim, batch_first=True)
+        self.fc = nn.Linear(hidden_dim, n_classes)
+
+    def forward(self, x):
+        x = self.embedding(x)
+        out, _ = self.rnn(x)
+        return self.fc(out[:, -1, :])
+
+# Example instantiation:
+model = RNNClassifier(vocab_size=5000, embed_dim=100, hidden_dim=64, n_classes=2)
+```
+
+### 9.9 Compute BLEU score for a candidate vs. reference
+```python
+from nltk.translate.bleu_score import sentence_bleu
+
+reference = [['this', 'is', 'a', 'test']]
+candidate = ['this', 'is', 'a', 'trial']
+score = sentence_bleu(reference, candidate)
+print(f"BLEU score: {score:.2f}")
+```
+
+### 9.10 Perform topic modeling with Gensim’s LDA
+```python
+from gensim import corpora, models
+
+documents = [
+    "cats and dogs",
+    "dogs and wolves",
+    "cats and lions",
+    "lions and tigers"
+]
+texts = [doc.split() for doc in documents]
+dic = corpora.Dictionary(texts)
+corpus = [dic.doc2bow(text) for text in texts]
+lda = models.LdaModel(corpus, num_topics=2, id2word=dic, passes=10)
+print(lda.print_topics())
+```
+
+### 9.11 Extract named entities with spaCy
+```python
+import spacy
+nlp = spacy.load('en_core_web_sm')
+doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
+ents = [(ent.text, ent.label_) for ent in doc.ents]
+print(ents)
+# [('Apple', 'ORG'), ('U.K.', 'GPE'), ('$1 billion', 'MONEY')]
+```
+
+### 9.12 Compute cosine similarity between two sentences
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+texts = ["machine learning", "deep learning"]
+vec = TfidfVectorizer().fit_transform(texts)
+sim = cosine_similarity(vec[0], vec[1])
+print(f"Cosine similarity: {sim[0][0]:.2f}")
+```
+
+### 9.13 Perform dependency parsing with spaCy
+```python
+import spacy
+nlp = spacy.load('en_core_web_sm')
+doc = nlp("The quick brown fox jumps over the lazy dog")
+for token in doc:
+    print(token.text, token.dep_, token.head.text)
+```
+
+### 9.14 Implement text cleaning and normalization
+```python
+import re
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9\s]', '', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+print(clean_text("Hello, WORLD!! 123"))
+# "hello world 123"
+```
+
+### 9.15 Train a TF–IDF + SVM pipeline for multi-class text classification
+```python
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.svm import LinearSVC
+
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer()),
+    ('svc', LinearSVC())
+])
+texts = ["sports news", "politics today", "tech review"]
+labels = [0, 1, 2]
+pipeline.fit(texts, labels)
+print(pipeline.predict(["latest sports update", "new smartphone"]))
+```
+
+### 9.16 Generate text with a pretrained GPT-2 using HuggingFace
+```python
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2')
+input_ids = tokenizer.encode("In a distant future,", return_tensors='pt')
+outputs = model.generate(input_ids, max_length=30, num_return_sequences=1)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+### 9.17 Calculate word frequencies from a corpus
+```python
+from collections import Counter
+
+corpus = ["this is a test", "this test is fun"]
+words = " ".join(corpus).split()
+freq = Counter(words)
+print(freq.most_common())
+# [('this', 2), ('is', 2), ('a', 1), ('test', 2), ('fun', 1)]
+```
+
+### 9.18 Cluster documents with TF–IDF + KMeans
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+
+docs = [
+    "cats and dogs",
+    "lions and tigers",
+    "machine learning models",
+    "deep learning techniques"
+]
+vec = TfidfVectorizer(stop_words='english')
+X = vec.fit_transform(docs)
+km = KMeans(n_clusters=2, random_state=42).fit(X)
+print(km.labels_)
+```
+
+### 9.19 Evaluate text classifier with precision, recall, F1
+```python
+from sklearn.metrics import classification_report
+
+y_true = [0,1,0,1]
+y_pred = [0,1,1,1]
+print(classification_report(y_true, y_pred, target_names=['neg','pos']))
+```
+
+### 9.20 Translate English to German with a MarianMT model
+```python
+from transformers import MarianMTModel, MarianTokenizer
+
+model_name = 'Helsinki-NLP/opus-mt-en-de'
+tokenizer = MarianTokenizer.from_pretrained(model_name)
+model = MarianMTModel.from_pretrained(model_name)
+
+text = "Machine learning is transforming the world."
+inputs = tokenizer(text, return_tensors="pt")
+translated = model.generate(**inputs)
+print(tokenizer.decode(translated[0], skip_special_tokens=True))
+```
+# Interview Qiestions Part, III
+
+##  Python Fundamentals & Pandas
+
+### 1. Explain the difference between `__getitem__` and `__getattr__` in Python classes.  
+**Answer:**  
+- `__getitem__(self, key)` is invoked when you use `obj[key]`.  
+- `__getattr__(self, name)` is called only if the attribute `name` is not found the usual way (i.e. `obj.name`).  
+
+### 2. When does Pandas issue a “chained assignment” warning and how can you avoid it?  
+**Answer:**  
+- It happens when you write `df[df.col > 0].col2 = 5`, which returns a view then assigns.  
+- Avoid it by using `.loc`, e.g. `df.loc[df.col > 0, 'col2'] = 5`, or call `.copy()` on the slice.
+
+### 3. How do you convert a column to categorical and why would you?  
+**Answer:**  
+- Use `df['col'] = df['col'].astype('category')`.  
+- It reduces memory and speeds up groupby/merge when the column has few distinct values.
+
+### 4. What’s the difference between a view and a copy in Pandas slicing?  
+**Answer:**  
+- A view shares the same underlying data buffer; modifying it may change the original.  
+- A copy is a separate object; you can force it via `df.iloc[...] .copy()`.
+
+### 5. How can you use `itertools.groupby` vs. `df.groupby`?  
+**Answer:**  
+- `itertools.groupby` works on sorted Python iterables and groups consecutive items.  
+- `df.groupby` works on column values regardless of order and supports aggregation, transformation, and filtering.
+
+## Machine Learning with scikit-learn
+
+### 1. How do you implement a custom scorer for `GridSearchCV`?  
+**Answer:**  
+```python
+from sklearn.metrics import make_scorer, f1_score
+scorer = make_scorer(f1_score, average='macro')
+grid = GridSearchCV(estimator, param_grid, scoring=scorer)
+2. How can you preprocess numeric and categorical features differently in one pipeline?
+```
+
+**Answer:**
+
+Use ColumnTransformer:
+
+```python
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+
+pre = ColumnTransformer([
+    ('num', StandardScaler(), num_cols),
+    ('cat', OneHotEncoder(), cat_cols)
+])
+pipe = Pipeline([('pre', pre), ('clf', LogisticRegression())])
+3. What is a learning curve and how do you interpret it?
+```
+
+**Answer:**
+
+```python
+A plot of training vs. validation score as a function of training set size.
+
+Converging high scores → low bias.
+
+Large gap → high variance (overfitting).
+
+4. How do you calibrate classifier probabilities?
+```
+
+**Answer:**
+
+Use CalibratedClassifierCV:
+
+```python
+from sklearn.calibration import CalibratedClassifierCV
+clf = CalibratedClassifierCV(base_estimator, method='isotonic', cv=5)
+clf.fit(X_train, y_train)
+5. How do you train a multi-output regression model?
+```
+
+**Answer:**
+
+Wrap any regressor in MultiOutputRegressor:
+
+```python
+from sklearn.multioutput import MultiOutputRegressor
+model = MultiOutputRegressor(RandomForestRegressor()).fit(X, y_multi)
+Deep Learning with TensorFlow
+1. How do you apply label smoothing in Keras?
+```
+
+**Answer:**
+
+Pass label_smoothing to the loss:
+
+```python
+model.compile(
+  optimizer='adam',
+  loss=tf.keras.losses.CategoricalCrossentropy(label_smoothing=0.1),
+  metrics=['accuracy'])
+```
+
+### 2. How can you build a custom layer using Lambda?
+
+**Answer:**
+
+```python
+from tensorflow.keras.layers import Lambda
+square = Lambda(lambda x: x**2)
+output = square(input_tensor)
+```
+
+### 3. How do you control GPU memory growth?
+
+**Answer:**
+
+```python
+gpus = tf.config.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpus[0], True)
+```
+
+### 4. How would you accumulate gradients manually across multiple batches?
+
+**Answer:**
+
+```python
+optimizer = tf.keras.optimizers.Adam()
+accum_steps = 4
+@tf.function
+def train_step(data):
+    for i, (x, y) in enumerate(data):
+        with tf.GradientTape() as tape:
+            loss = compute_loss(x, y)
+        grads = tape.gradient(loss, model.trainable_variables)
+        if i % accum_steps == 0:
+            optimizer.apply_gradients(zip(grads, model.trainable_variables))
+```
+
+
+### 5. How do you load a pretrained model from TensorFlow Hub?
+
+**Answer:**
+
+```python
+import tensorflow_hub as hub
+model = tf.keras.Sequential([
+    hub.KerasLayer("https://tfhub.dev/google/nnlm-en-dim128/2", input_shape=[], dtype=tf.string),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+```
+
+## Deep Learning with PyTorch
+
+### 1. How do you implement a custom loss function?
+
+**Answer:**
+
+```python
+import torch.nn as nn
+import torch
+class MyLoss(nn.Module):
+    def forward(self, output, target):
+        return torch.mean((output - target)**2 + 0.1*output.abs())
+loss_fn = MyLoss()
+2. Explain model.train() vs. model.eval().
+```
+
+**Answer:**
+
+```python
+
+model.train() enables dropout and batchnorm updates.
+
+model.eval() disables dropout and uses running stats in batchnorm.
+```
+
+### 3. How do you use torch.utils.data.DataLoader with a custom collate_fn?
+
+**Answer:**
+
+```python
+def collate(batch):
+    # custom padding or stacking logic
+    return torch.utils.data.dataloader.default_collate(batch)
+
+loader = DataLoader(dataset, batch_size=32, collate_fn=collate)
+```
+
+### 4. How do you apply gradient checkpointing to save memory?
+```
+
+**Answer:**
+
+Wrap blocks in torch.utils.checkpoint.checkpoint():
+
+```python
+from torch.utils.checkpoint import checkpoint
+out = checkpoint(self.block, x)
+```
+
+### 5. How do you set up Distributed Data Parallel (DDP) training?
+
+**Answer:**
+
+```python
+import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
+
+dist.init_process_group('nccl')
+model = DDP(model.to(device))
+```
+
+## SQL & Database Performance Tuning
+
+### 1. How do you use EXPLAIN (ANALYZE, BUFFERS) in PostgreSQL?
+
+**Answer:**
+
+```sql
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM table WHERE col > 100;
+
+# Shows actual row counts, timing, and buffer usage.
+```
+
+### 2. What are BRIN indexes and when are they useful?
+
+**Answer:**
+
+```python
+BRIN (Block Range INdex) stores summary info per block range.
+
+Good for very large, naturally ordered data like time-series.
+```
+
+### 3. How can you speed up bulk inserts?
+
+**Answer:**
+
+Use COPY instead of individual INSERT statements.
+
+Disable indexes/triggers before load and re-enable after.
+
+### 4. How do you update statistics on partitioned tables?
+
+**Answer:**
+
+Run ANALYZE on each child or use:
+
+```sql
+ANALYZE parent_table;
+```
+
+which cascades to partitions.
+
+### 5. How do you detect and fix table bloat?
+
+**Answer:**
+
+Query pg_stat_user_tables for n_dead_tup.
+
+Run VACUUM (FULL) or use pg_repack to reclaim space.
+
+## Data Engineering: Pipelines & Data Lakes/Warehouses
+
+### 1. How do you backfill a missed run in Airflow?
+
+**Answer:**
+
+Set catchup=True in your DAG and ensure start_date covers the gap; Airflow will schedule past runs.
+
+### 2. What are AWS Glue bookmarks?
+
+**Answer:**
+
+They track data processed in previous runs to enable incremental ETL.
+
+### 3. How can you enforce DataFrame schema with Pandera?
+
+**Answer:**
+
+```python
+import pandera as pa
+schema = pa.DataFrameSchema({
+    "col": pa.Column(pa.Int, pa.Check(lambda s: s >= 0))
+})
+validated_df = schema.validate(df)
+```
+
+### 4. How do you write unit tests for an ETL function?
+
+**Answer:**
+
+Use pytest to feed known input, call the transformation function, and assert the output matches expected.
+
+### 5. How do you integrate Great Expectations into a pipeline?
+
+**Answer:**
+
+Create expectation suites, then call great_expectations.checkpoint in your DAG to validate data against them.
+
+## Model Deployment with Python Web Frameworks
+
+### 1. How do you implement a health-check endpoint in Flask?
+
+**Answer:**
+
+```python
+@app.route("/health")
+def health():
+    return {"status":"ok"}, 200
+```
+
+### 2. How can you stream application logs to the Elastic Stack?
+
+**Answer:**
+
+Configure the logging module with a LogstashFormatter and send to Logstash via TCP/UDP handler.
+
+### 3. How do you provide real-time progress updates via WebSockets in FastAPI?
+
+**Answer:**
+
+Use fastapi.WebSocket endpoint:
+
+```python
+@app.websocket("/ws")
+async def ws_endpoint(ws: WebSocket):
+    await ws.accept()
+    await ws.send_text("progress: 10%")
+```
+
+### 4. How do you protect your Flask API behind Kong with JWT?
+
+**Answer:**
+
+Configure Kong’s JWT plugin on your service/route.
+
+Clients must include Authorization: Bearer <token>.
+
+### 5. How do you deploy a FastAPI app to Azure Functions?
+
+**Answer:**
+
+Wrap your ASGI app with Mangum adapter and deploy using the Azure Functions Python worker:
+
+```python
+from mangum import Mangum
+handler = Mangum(app)
+```
+
+## Kaggle Competitions & Real-world Projects
+
+### 1. How do you log experiment parameters and metrics with MLflow?
+
+**Answer:**
+
+```python
+import mlflow
+mlflow.start_run()
+mlflow.log_param("lr", 0.01)
+mlflow.log_metric("accuracy", 0.95)
+mlflow.end_run()
+```
+
+### 2. How do you perform time-series cross-validation with scikit-learn?
+
+**Answer:**
+
+Use TimeSeriesSplit:
+
+```python
+from sklearn.model_selection import TimeSeriesSplit
+tscv = TimeSeriesSplit(n_splits=5)
+for train_idx, test_idx in tscv.split(X): ...
+```
+
+### 3. How do you version notebooks and data together in Git and DVC?
+
+**Answer:**
+
+Track code and small files in Git; track large datasets with dvc add data.csv and commit the .dvc file.
+
+### 4. How do you automate Kaggle submissions in a CI pipeline?
+
+**Answer:**
+
+Invoke kaggle competitions submit -c <comp> -f submission.csv -m "msg" as a build step after model training.
+
+### 5. How do you serve model artifacts using an artifact repository (e.g., Nexus, Artifactory)?
+
+**Answer:**
+
+Upload model files via CI, then download them at runtime in your deployment script using the repository’s REST API.
