@@ -1,4 +1,4 @@
-export ENV_NAME=Coding4Beginner-Vaishnavi-DataScienceRoadmap
+export ENV_NAME=Coding4Beginner-Vaishnavi
 export ENV_HOME=$PWD
 
 . venv env        init
